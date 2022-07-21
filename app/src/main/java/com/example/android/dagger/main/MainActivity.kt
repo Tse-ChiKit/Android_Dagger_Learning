@@ -18,6 +18,7 @@ package com.example.android.dagger.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         (application as MyApplication).appComponent.inject(this)
+        Log.d("mul instances: main",userManager.toString())
         super.onCreate(savedInstanceState)
 
         //val userManager = (application as MyApplication).userManager

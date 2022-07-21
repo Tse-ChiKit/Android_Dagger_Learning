@@ -26,6 +26,7 @@ private const val PASSWORD_SUFFIX = "password"
  * Handles User lifecycle. Manages registrations, logs in and logs out.
  * Knows when the user is logged in.
  */
+
 class UserManager @Inject constructor(private val storage: Storage) {
 
     /**

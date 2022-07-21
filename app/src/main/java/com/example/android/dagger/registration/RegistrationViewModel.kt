@@ -16,6 +16,7 @@
 
 package com.example.android.dagger.registration
 
+import android.util.Log
 import com.example.android.dagger.user.UserManager
 import javax.inject.Inject
 /**
@@ -27,6 +28,10 @@ class RegistrationViewModel @Inject constructor(val userManager: UserManager) {
     private var username: String? = null
     private var password: String? = null
     private var acceptedTCs: Boolean? = null
+
+    init {
+        Log.d("mul instances: RegVm",userManager.toString())
+    }
 
     fun updateUserData(username: String, password: String) {
         this.username = username
